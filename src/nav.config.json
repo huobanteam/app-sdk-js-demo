@@ -1,0 +1,139 @@
+[
+  {
+    "name": "使用指南",
+    "children": [
+      {
+        "path": "/install",
+        "name": "安装"
+      },
+      {
+        "path": "/quickstart",
+        "name": "快速开始"
+      }
+    ]
+  },
+  {
+    "name": "更新日志",
+    "path": "/changelog",
+    "disabled": true
+  },
+  {
+    "name": "客户端方法",
+    "groups": [
+      {
+        "groupName": "基本",
+        "list": [
+          {
+            "path": "/init",
+            "title": "Init 初始化"
+          }
+        ]
+      },
+      {
+        "groupName": "用户",
+        "list": [
+          {
+            "path": "/user",
+            "title": "Picker 选人"
+          },
+          {
+            "path": "/user#cha-kan-yong-hu-ka-pian",
+            "title": "Profile 卡片"
+          },
+          {
+            "path": "/members",
+            "title": "Members 成员列表"
+          }
+        ]
+      },
+      {
+        "groupName": "数据",
+        "list": [
+          {
+            "path": "/filters",
+            "title": "Filter 筛选器"
+          },
+          {
+            "path": "/item",
+            "title": "Detail 详情"
+          },
+          {
+            "path": "/item#cha-kan-dan-tiao-shu-ju-bian-geng",
+            "title": "Diff 变更"
+          },
+          {
+            "path": "/item#cha-kan-fu-jian",
+            "title": "Attach 附件"
+          },
+          {
+            "path": "/item#cha-kan-shu-ju-lie-biao",
+            "title": "List 列表"
+          }
+        ]
+      },
+      {
+        "groupName": "其他",
+        "list": [
+          {
+            "path": "/date",
+            "title": "DatePicker 选日期"
+          },
+          {
+            "path": "/editor",
+            "title": "Editor 富文本编辑"
+          },
+          {
+            "path": "/share",
+            "title": "OpenShare 分享"
+          },
+          {
+            "path": "/page",
+            "title": "OpenPage 打开页面"
+          },
+          {
+            "path": "/location",
+            "title": "Location 定位"
+          },
+          {
+            "path": "/qrcode",
+            "title": "QRCode 扫码"
+          },
+          {
+            "path": "/others",
+            "title": "SetTitle 设置标题"
+          }
+        ]
+      },
+      {
+        "groupName": "底层",
+        "list": [
+          {
+            "path": "/event",
+            "title": "Event 事件机制"
+          },
+          {
+            "path": "/broadcast",
+            "title": "Broadcast 广播"
+          }
+        ]
+      },
+      {
+        "groupName": "其他",
+        "list": [
+          {
+            "path": "/constant",
+            "title": "环境常量"
+          },
+          {
+            "path": "/constant#staticmethod",
+            "title": "静态方法"
+          },
+          {
+            "path": "/define#hui-diao",
+            "title": "回调方法"
+          }
+        ]
+      }
+    ]
+  }
+]
