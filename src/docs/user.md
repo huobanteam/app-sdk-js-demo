@@ -6,7 +6,7 @@
   <p>
     <el-checkbox v-model="multi">多选</el-checkbox>
     <el-checkbox v-model="required">必选</el-checkbox>
-    <el-select v-model="placement" placeholder="浮层位置" :style="{display: 'inline-block', width: '110px'}">
+    <el-select v-model="placement" placeholder="浮层位置" :style="{display: 'inline-block', width: '120px'}">
       <el-option
         v-for="(label, key) in placements"
         :label="label"
@@ -38,12 +38,16 @@ export default {
       users: null,
       multi: true,
       required: false,
-      placement: 'left-bottom',
+      placement: 'bottom-left',
       placements: {
-        'right-bottom': '右下',
-        'right-top': '右上',
-        'left-top': '左上',
-        'left-bottom': '左下'
+        'top-left': '上侧左对齐',
+        'top-right': '上侧右对齐',
+        'bottom-left': '下侧左对齐',
+        'bottom-right': '下侧右对齐',
+        'left-top': '左侧上对齐',
+        'left-bottom': '左侧下对齐',
+        'right-top': '右侧上对齐',
+        'right-bottom': '右侧下对齐',
       }
     }
   },
@@ -66,7 +70,7 @@ export default {
       }, e)
     },
     openUserProfile(user, index, e) {
-      this.client.openUserProfile(user.user_id, {placement: (index > 2 ? 'right-bottom' : 'left-bottom')}, e)
+      this.client.openUserProfile(user.user_id, {placement: (index > 2 ? 'bottom-right' : 'bottom-left')}, e)
     },
     handleRemove(user, e) {
       e.stopPropagation()
@@ -98,7 +102,7 @@ export default {
 | values    | 默认选中用户的id数组  | array       |  —  | []   |
 | title     | 浮层标题(仅web端有效) | string      |  —  | 选择用户 |
 | width     | 浮层宽度(仅web端有效) | Number      |  —  | 300 |
-| placement | 浮层位置(仅web端有效) | string      | left-top,left-bottom,right-top,right-bottom | right-bottom |
+| placement | 浮层位置(仅web端有效) | string      | top-left,top-right,bottom-left,bottom-right | bottom-right |
 
 ### fn
 | 参数      | 说明     | 类型      |  示例   |
@@ -121,7 +125,7 @@ export default {
 ### options
 | 属性      | 说明     | 类型      | 可选值       | 默认值   |
 |---------- |--------- |---------- |:------------:|-------- |
-| placement | 浮层位置(仅web端有效) | string      | left-top,left-bottom,right-top,right-bottom,bottom,top | bottom |
+| placement | 浮层位置(仅web端有效) | string      | top-left,top-right,bottom-left,bottom-right,bottom,top | bottom |
 
 
 <script>
@@ -141,10 +145,14 @@ export default {
       required: false,
       placement: '',
       placements: {
-        'right-bottom': '右下',
-        'right-top': '右上',
-        'left-top': '左上',
-        'left-bottom': '左下'
+        'top-left': '上侧左对齐',
+        'top-right': '上侧右对齐',
+        'bottom-left': '下侧左对齐',
+        'bottom-right': '下侧右对齐',
+        'left-top': '左侧上对齐',
+        'left-bottom': '左侧下对齐',
+        'right-top': '右侧上对齐',
+        'right-bottom': '右侧下对齐',
       }
     }
   },
@@ -153,7 +161,7 @@ export default {
       return {
         values: this.users ? this.users.map(u => u.user_id) : [],
         multi: this.multi,
-        placement: this.placement || 'left-bottom',
+        placement: this.placement || 'bottom-left',
         required: this.required
       }
     }
@@ -169,7 +177,7 @@ export default {
       }, e)
     },
     openUserProfile(user, index, e) {
-      this.client.openUserProfile(user.user_id, {placement: (index > 2 ? 'right-bottom' : 'left-bottom')}, e)
+      this.client.openUserProfile(user.user_id, {placement: (index > 2 ? 'bottom-right' : 'bottom-left')}, e)
     },
     handleRemove(user, e) {
       e.stopPropagation()

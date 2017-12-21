@@ -14,7 +14,7 @@
         :value="key">
       </el-option>
     </el-select>
-    <el-select v-model="placement" placeholder="浮层位置" :style="{display: 'inline-block', width: '110px'}">
+    <el-select v-model="placement" placeholder="浮层位置" :style="{display: 'inline-block', width: '120px'}">
       <el-option
         v-for="(label, key) in placements"
         :label="label"
@@ -47,10 +47,14 @@ export default {
       },
       placement: '',
       placements: {
-        'right-bottom': '右下',
-        'right-top': '右上',
-        'left-top': '左上',
-        'left-bottom': '左下'
+        'top-left': '上侧左对齐',
+        'top-right': '上侧右对齐',
+        'bottom-left': '下侧左对齐',
+        'bottom-right': '下侧右对齐',
+        'left-top': '左侧上对齐',
+        'left-bottom': '左侧下对齐',
+        'right-top': '右侧上对齐',
+        'right-bottom': '右侧下对齐',
       }
     }
   },
@@ -102,9 +106,9 @@ export default {
 |---------- |--------- |---------- |:------------:|--------- |
 | value     | 默认值   | string    |   |   |
 | type      | 类型     | string    | date, time, datetime  |  false  |
-| showClear    | 是否展示清除按钮用于清空已选日期  | boolean       |  —  | false   |
-| showToday     | 是否展示今天按钮用于选择当天日期 | boolean      |  —  | false |
-| placement | 选择器相对于触发元素的位置(仅web端有效) | string      | left-top,left-bottom,right-top,right-bottom | right-bottom |
+| showClear | 是否展示清除按钮用于清空已选日期  | boolean       |  —  | false   |
+| showToday | 是否展示今天按钮用于选择当天日期 | boolean      |  —  | false |
+| placement | 选择器相对于触发元素的位置(仅web端有效) | string      | top-left,top-right,bottom-left,bottom-right | bottom-right |
 
 ### fn
 | 参数      | 说明     | 类型      |  示例   |
@@ -134,10 +138,14 @@ export default {
       },
       placement: '',
       placements: {
-        'right-bottom': '右下',
-        'right-top': '右上',
-        'left-top': '左上',
-        'left-bottom': '左下'
+        'top-left': '上侧左对齐',
+        'top-right': '上侧右对齐',
+        'bottom-left': '下侧左对齐',
+        'bottom-right': '下侧右对齐',
+        'left-top': '左侧上对齐',
+        'left-bottom': '左侧下对齐',
+        'right-top': '右侧上对齐',
+        'right-bottom': '右侧下对齐',
       }
     }
   },
@@ -156,7 +164,7 @@ export default {
         value: this.defaultDatetime,
         showClear: this.showClear,
         showToday: this.showToday,
-        placement: this.placement || 'right-bottom'
+        placement: this.placement || 'bottom-right'
       }
     }
   },
